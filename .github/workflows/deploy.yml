@@ -19,4 +19,7 @@ jobs:
       - name: Hexo Generate
         run: npm run build
       - name: Hexo Deploy
-        run: npm run deploy
+        run: |
+          git config user.email "travis+bot@travismiller.com"
+          git config user.name "Travis Miller (bot)"
+          npm run deploy
