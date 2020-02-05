@@ -20,6 +20,6 @@ jobs:
         run: npm run build
       - name: Hexo Deploy
         run: |
-          git config user.email "travis+bot@travismiller.com"
-          git config user.name "Travis Miller (bot)"
+          git config --global user.email "travis+bot@travismiller.com"
+          git config --global user.name "Travis Miller (bot)"
           npm run deploy
